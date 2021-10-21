@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cesar Vigenere</title>
+	<script src="Js/logica.js"></script>
+	<script src="Js/logica2.js"></script>
+	<link rel="stylesheet" type="text/css" href="Css/bootstrap.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+				<img src="https://image.pngaaa.com/253/1749253-middle.png" width="60px" height="60px">
+			</a>
+			<a class="navbar-brand" href="index.html" style="margin-right: 44%; font-size: 30px;">Cifrados</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		</div>
+	</nav>
+	<div class="container">
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 style="text-align: center;">Cesar</h3><br>
+					<form>
+						<div class="form-group">
+							<label class="labels"><h4 class="subtitulo">Texto: </h4></label>
+							<textarea type="form-text" class="form-control" rows="5" id="Cadena"> </textarea>
+						</div>
+						<div class="form-group" style="margin-top: 10px;">
+							<label class="labels"><h4 class="subtitulo">Incremento: </h4></label>
+							<input type="number" id="incremento" maxlength="15" value="0" name=""><br>
+						</div>
+						<div class="form-group" style="margin-top: 10px" >
+							<input class="btn btn-primary rounded-pill bg-dark" type="button" value="Decifrar" onclick="decodificar()" style="float: right;">
+							<input class="btn btn-primary rounded-pill bg-dark" type="button" value="Cifrar" onclick="codificar()" style="float: right; margin-right: 10px;">
+						</div>
+						<br><br>
+						<div class="form-group">
+							<label class="labels"><h4 class="subtitulo">Resultado: </h4></label>
+							<textarea id="CadenaRes" type="form-text" class="form-control" rows="5" disabled="true"> </textarea>
+						</div>
+					</form>
+					
+				</div>
+				<div class="col-md-6">
+					<h3 style="text-align: center;">Vigenere</h3><br>
+					<form id="cifrar">
+			          	<div class="form-group">
+			            	<h4 class="subtitulo">Mensaje: </h4>
+			            	<textarea type="form-text" class="form-control" id="texto" rows="5" onkeypress="return validarn(event)"></textarea>
+			          	</div>
+			          	<div class="form-group" style="margin-top: 10px">
+			            	<h4 class="subtitulo">Clave: </h4> 
+			            	<input type="form-text" class="form-control" id="clave" onkeypress="return validarn(event)">
+			          	</div>
+			          	<div class="form-group">
+			          		<div class="form-check" style="margin-top: 20px">
+				              	<label class="form-check-label">
+				                	<input class="form-check-input" type="radio" name="radios" id="cifrar" value="cifrar" checked>
+				                	Cifrar
+				              	</label>
+				          	</div>
+				          	<div class="form-check">
+				              	<label class="form-check-label">
+				                	<input class="form-check-input" type="radio" name="radios" id="descifrar" value="descifrar">
+				                	Descifrar
+				              	</label>
+				          	</div>
+				          	<button type="button" class="btn btn-primary rounded-pill bg-dark" onclick="cifrado()" style="margin-top: -54px; float: right;">Enviar</button>
+			          	</div>
+			          	<div class="form-group">
+			          		<p><h3 class="subtitulo">Resultado: <h5 id="resultado"></h5> </h3> </p>
+			          	</div>
+			      	</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br>
+	<footer class="footer footer-expand-lg footer-dark bg-primary">
+		<div class="container-fluid">
+			<br>
+			<br>
+			<h5 style="color: white" align="center">Todos los derechos reservados a sus respectivos dueños</h5>
+			<h5 style="color: white" align="right">Martinez Vidal Mariana 5IV8</h5>
+			<br>
+		</div>
+	</footer>
+</body>
+</html>
